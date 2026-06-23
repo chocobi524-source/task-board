@@ -1,0 +1,138 @@
+.app {
+  width: 100%;
+  max-width: 560px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a2e;
+}
+
+/* 入力エリア */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.task-input:focus {
+  border-color: #6366f1;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.add-button:hover {
+  background: #4f46e5;
+}
+
+/* サマリー */
+.summary {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* タスクリスト */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.task-item.completed {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+  opacity: 0.7;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #6366f1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-text {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* 削除ボタン */
+.delete-button {
+  flex-shrink: 0;
+  margin-left: 12px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.delete-button:hover {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+/* 空メッセージ */
+.empty-message {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
